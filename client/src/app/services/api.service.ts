@@ -6,9 +6,10 @@ import { Appointment, Staff, Client, Bill } from '../models/models';
 
 @Injectable({ providedIn: 'root' })
 export class ApiService {
-  private base = 'http://localhost:5000/api';
+  // private base = 'http://localhost:5000/api';
+  private base = 'https://aura-salon-aa7o.onrender.com/api';
 
-  constructor(private http: HttpClient, private auth: AuthService) {}
+  constructor(private http: HttpClient, private auth: AuthService) { }
 
   private headers(): HttpHeaders {
     return new HttpHeaders({ Authorization: `Bearer ${this.auth.getToken()}` });
