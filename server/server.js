@@ -13,7 +13,12 @@ dotenv.config();
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+    origin:[
+        "http://localhost:4200",
+        "https://aura-salon-three.vercel.app"
+    ]
+}));
 app.use(express.json());
 
 // Routes
